@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}บักนนท์{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #a4508b 0%, #f7645b 100%);
+            font-family: 'Kanit', Arial, sans-serif;
+            font-size: 1.35rem;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 2.4rem;
+            letter-spacing: 1px;
+        }
+        .nav-link, .dropdown-item {
+            font-size: 1.35rem;
+            font-weight: 500;
+        }
+        .container { margin-top: 40px; }
+        .navbar {
+            background: linear-gradient(90deg, #a4508b 0%, #f7645b 100%) !important;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            background: linear-gradient(90deg, #a4508b 0%, #f7645b 100%);
+            color: #fff;
+            text-align: center;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">บักนนท์</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="fw-bold">Menu</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end animate__animated animate__fadeIn" aria-labelledby="menuDropdown">
+            <li><a class="dropdown-item" href="/">หน้าหลัก</a></li>
+            <li><a class="dropdown-item" href="/about/">เกี่ยวกับ</a></li>
+            <li><a class="dropdown-item" href="/contact/">ติดต่อ</a></li>
+            <li><a class="dropdown-item" href="/products/">สินค้า</a></li>
+            <li><a class="dropdown-item" href="/cart/">ตะกร้าสินค้า</a></li>
+            <li><a class="dropdown-item" href="/login/">เข้าสู่ระบบ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+<footer>
+    &copy; ร้านบักนนท์บริการดีปลอดภัยหายห่วงแน่นอน
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
